@@ -12,6 +12,10 @@ typedef struct {
     float throttle_pct;
     bool throttle_enable;
     float wheel_speed;
+
+    // updated by the supervisor task
+    uint8_t my_state;
+    float   simulation_speed;
 } app_state_t;
 
 extern app_state_t     g_state;
